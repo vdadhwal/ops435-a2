@@ -1,0 +1,33 @@
+Name: Vaishali Dadhwal
+Seneca Email: vdadhwal@myseneca.ca
+OPS435 – Assignment 2 winter 2020- Algorithm
+
+
+Process a list of all users logged in (and out) on a UNIX/Linux system from a text file created by the shell command "last -F"
+
+
+
+
+Input 
+
+The user passes arguments in the form of user information and daily , weekly and monthly report.   
+An input is taken from the file in the form of date , time , day and month.
+All these inputs are stored in variables that will be used later.
+
+Processing
+
+Normalizing the data : If the login and logout data contains the same day and month , it need not be normalized.
+
+If the day variable isn't the same , we compare the date and month. 
+a) If the month is not same , we compare the months through a dictionary key:value and subtract the logout month and login month.(not complete yet)
+   We then compare the dates 
+   (i) For the first login month - count the no of the days left for the month from a (month:day) dictionary 
+   (ii) For the logout month - count the no of days preceding the date again by comparing from the (month:day) dictionary
+   
+   On the basis of the daily , weekly or the monthly report
+   (i) Daily report - all the logins with same day ,same date and same month and simply subtract the login and logout times of each login and all of them.
+   (ii) Weekly report - all the logins throughout a week where the week shall start from a Monday and obviously last till the Sunday. Thus the logins of a user shall be counted for the week.
+   (iii) Monthly report - all the logins of a user in a whole month shall be added to produce the report.
+   
+ Output:
+ Display, as required in the task (formatting, spacing etc.), the output of the processed data
